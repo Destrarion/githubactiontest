@@ -1,0 +1,17 @@
+name: Build iOS App
+
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+
+    - name: Build App
+      run: xcodebuild -project githubactiontest.xcodeproj -scheme githubactiontest -destination 'platform=iOS Simulator,OS=16.0,name=iPhone 11' -configuration Release build

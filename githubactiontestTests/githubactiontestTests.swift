@@ -27,10 +27,11 @@ final class githubactiontestTests: XCTestCase {
     }
 
     func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let a = 1
+        let b = 2
+        var c = a + b
+        XCTAssertTrue(c == 3)
         }
-    }
-
 }
+
+
